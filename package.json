@@ -1,0 +1,20 @@
+{
+  "name": "fullstack-qlks",
+  "version": "1.0.0",
+  "description": "Phuc binh dep chai code fullstack",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Thichanmyquang/QLKSNganSaoBE-FullStack.git"
+  },
+  "keywords": [
+    "nodejs",
+    "react"
+  ],
+  "author": "phucbinhh depchai",
+  "license": "ISC"
+}
