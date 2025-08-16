@@ -52,15 +52,14 @@
 
 ---
 
-## 🗂 Cấu trúc thư mục (rút gọn)
+## 🗂 Cấu trúc thư mục
 ```
 QLyKhachSan-FullStack/
-├─ FlightManagement.sln              # Solution .NET
-└─ FlightManagement/                 # (Tên tạm – có thể đổi thành HotelManagement)
+├─ FlightManagement.sln              
+└─ FlightManagement/                 
    ├─ Controllers/
    ├─ Models/
    ├─ Views/
-   ├─ wwwroot/ (nếu ASP.NET Core)
    └─ ... 
 ```
 > Tùy cấu trúc thực tế trong repo, cập nhật lại cho chính xác.
