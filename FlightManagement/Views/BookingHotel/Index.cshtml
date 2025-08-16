@@ -1,0 +1,76 @@
+﻿@model IEnumerable<FlightManagement.Models.BookingHotel>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.IdBookingHotel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.accountID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IdHotel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BookingDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CheckinDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CheckoutDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RoomPrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RoomCount)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdBookingHotel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.accountID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdHotel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BookingDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CheckinDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CheckoutDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RoomPrice)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RoomCount)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,78 @@
+﻿@model FlightManagement.Models.HotelBooking
+
+@{
+    Layout = null;
+}
+
+<div class="container mt-5">
+    <div class="card shadow-lg">
+        <div class="card-header bg-primary text-white text-center">
+            <h2>Đặt phòng tại @Model.NameHotel</h2>
+        </div>
+        <div class="card-body">
+            <p class="text-muted text-center">Giá phòng: @String.Format("{0:N0}", Model.RoomPrice) đ</p>
+            <p class="text-muted text-center">Vị trí: @Model.Location</p>
+
+            <form asp-action="Book" method="post">
+                <input type="hidden" asp-for="HotelID" />
+
+                <!-- Customer Name -->
+                <div class="form-group">
+                    <label asp-for="CustomerName" class="font-weight-bold">Họ và tên</label>
+                    <input asp-for="CustomerName" class="form-control" placeholder="Nhập họ và tên" />
+                    <span asp-validation-for="CustomerName" class="text-danger"></span>
+                </div>
+
+                <!-- Customer Phone -->
+                <div class="form-group">
+                    <label asp-for="CustomerPhone" class="font-weight-bold">Số điện thoại</label>
+                    <input asp-for="CustomerPhone" class="form-control" placeholder="Nhập số điện thoại" />
+                    <span asp-validation-for="CustomerPhone" class="text-danger"></span>
+                </div>
+
+                <!-- Check-in Date -->
+                <div class="form-group">
+                    <label asp-for="CheckInDate" class="font-weight-bold">Ngày nhận phòng</label>
+                    <input asp-for="CheckInDate" type="date" class="form-control" />
+                    <span asp-validation-for="CheckInDate" class="text-danger"></span>
+                </div>
+
+                <!-- Check-out Date -->
+                <div class="form-group">
+                    <label asp-for="CheckOutDate" class="font-weight-bold">Ngày trả phòng</label>
+                    <input asp-for="CheckOutDate" type="date" class="form-control" />
+                    <span asp-validation-for="CheckOutDate" class="text-danger"></span>
+                </div>
+
+                <div class="form-group text-center">
+                    <button type="submit" class="btn btn-success btn-lg">Đặt phòng</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Optional: Custom CSS for form styling -->
+<style>
+    .container {
+        max-width: 600px;
+    }
+
+    .card {
+        border-radius: 10px;
+    }
+
+    .card-header {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .btn {
+        width: 100%;
+        font-size: 18px;
+    }
+</style>
